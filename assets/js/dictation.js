@@ -274,7 +274,9 @@
       const blockEl = document.getElementById(`sentence-block-${idx}`);
       const revealEl = document.getElementById(`reveal-${idx}`);
 
-      const isCorrect = normalize(input.value) === normalize(sentence);
+      const score = similarity(input.value, sentence);
+
+const isCorrect = score >= 0.8;
       sentenceStates[idx].checked = true;
       sentenceStates[idx].correct = isCorrect;
 
@@ -311,9 +313,30 @@
     updateProgress();
   }
 
-  function normalize(text) {
-    return text.trim().toLowerCase().replace(/\s+/g, " ");
-  }
+ function normalize(text) {
+  return text
+    .toLowerCase()
+    .replace(/[.,!?;:'"]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+   function similarity(str1, str2) {
+  str1 = normalize(str1);
+  str2 = normalize(str2);
+
+  const words1 = str1.split(" ");
+  const words2 = str2.split(" ");
+
+  let matches = 0;
+
+  words2.forEach(word => {
+    if (words1.includes(word)) {
+      matches++;
+    }
+  });
+
+  return matches / words2.length;
+}
 
   // ============================================================
   // Final result card
