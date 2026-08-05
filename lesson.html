@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title id="page-title">Dictation Practice | Learn with Ms.Thúy</title>
+  <meta name="description" content="Practice English dictation with audio, hints, and instant scoring." />
+  <meta name="color-scheme" content="light dark" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-badge" aria-hidden="true">✏️</div>
+      <div class="brand-text">
+        <h1>Learn with Ms.Thúy</h1>
+        <p>Practice English Dictation Every Day</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <!-- ===== Lesson meta header ===== -->
+    <section class="lesson-header glass">
+      <a class="back-link" href="index.html">&larr; Back to all lessons</a>
+      <h2 id="lesson-title">Loading lesson...</h2>
+      <div class="lesson-meta" id="lesson-meta"></div>
+    </section>
+
+    <!-- ===== Sticky audio player ===== -->
+    <section class="audio-player glass" aria-label="Audio player">
+      <button class="track-btn" id="rewind-btn" title="Rewind 10s" aria-label="Rewind 10 seconds">◀10s</button>
+      <button class="track-btn play-btn" id="play-btn" title="Play/Pause" aria-label="Play or pause">▶</button>
+      <button class="track-btn" id="forward-btn" title="Forward 10s" aria-label="Forward 10 seconds">10s▶</button>
+
+      <div class="audio-progress" id="audio-progress-track" role="slider" aria-label="Seek audio" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+        <div class="audio-progress-fill" id="audio-progress-fill"></div>
+      </div>
+      <span class="audio-time" id="audio-time">0:00 / 0:00</span>
+
+      <select class="speed-select" id="speed-select" aria-label="Playback speed">
+        <option value="0.75">0.75x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+      </select>
+
+      <audio id="lesson-audio" preload="metadata"></audio>
+    </section>
+
+    <!-- ===== Progress bar ===== -->
+    <section class="progress-block glass">
+      <div class="progress-label">
+        <span id="progress-text">Progress: 0 / 0 completed</span>
+        <span id="progress-percent">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-bar-fill" id="progress-bar-fill" style="width:0%"></div>
+      </div>
+    </section>
+
+    <!-- ===== Limit reached banner (hidden by default) ===== -->
+    <div class="limit-banner glass" id="limit-banner" hidden>
+      You have reached the maximum number of attempts.<br />
+      All answers are now displayed.
+    </div>
+
+    <!-- ===== Sentences (rendered by dictation.js) ===== -->
+    <section id="sentence-list" aria-live="polite"></section>
+
+    <!-- ===== Action bar ===== -->
+    <div class="action-bar">
+      <button class="btn" id="check-btn">✅ Check Answer</button>
+      <button class="btn btn-secondary" id="reset-btn">🔄 Reset Lesson</button>
+    </div>
+
+    <!-- ===== Final result card (hidden until checked) ===== -->
+    <section class="final-card glass" id="final-card" hidden>
+      <h2>🏆 Final Result</h2>
+      <div class="final-score" id="final-score">0.0/10</div>
+      <div class="final-stats">
+        <div class="final-stat"><div class="num" id="stat-correct">0</div><div class="label">Correct</div></div>
+        <div class="final-stat"><div class="num" id="stat-wrong">0</div><div class="label">Wrong</div></div>
+        <div class="final-stat"><div class="num" id="stat-hints">0</div><div class="label">Hints Used</div></div>
+        <div class="final-stat"><div class="num" id="stat-attempts">0</div><div class="label">Attempts</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Learn with Ms.Thúy — Made for curious ears.</p>
+  </footer>
+
+  <script src="assets/js/dictation.js"></script>
+</body>
+</html>
