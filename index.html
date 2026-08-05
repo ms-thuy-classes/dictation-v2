@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO ===== -->
+  <title>Learn with Ms.Thúy | English Dictation Practice</title>
+  <meta name="description" content="Practice English Dictation from A1 to C2 with audio, hints, scoring, and instant feedback." />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- ===== Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ===== Styles ===== -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-badge" aria-hidden="true">✏️</div>
+      <div class="brand-text">
+        <h1>Learn with Ms.Thúy</h1>
+        <p>Practice English Dictation Every Day</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <h1>Sharpen your ear, one <span class="accent">sentence</span> at a time.</h1>
+      <p>Listen closely, fill in the blanks, and watch your score grow.</p>
+    </section>
+
+    <!-- ===== Search + Filter ===== -->
+    <section class="filter-bar glass" role="search">
+      <input
+        type="search"
+        id="search-input"
+        class="search-input"
+        placeholder="Search by title or keyword..."
+        aria-label="Search lessons by title or keyword"
+      />
+      <select id="level-select" class="level-select" aria-label="Filter by level">
+        <option value="all">All Levels</option>
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="B2">B2</option>
+        <option value="C1">C1</option>
+        <option value="C2">C2</option>
+      </select>
+    </section>
+
+    <!-- ===== Lesson grid (populated by main.js) ===== -->
+    <section class="lesson-grid" id="lesson-grid" aria-live="polite">
+      <p class="loading-state">Loading lessons...</p>
+    </section>
+
+    <!-- ===== Pagination ===== -->
+    <nav class="pagination" id="pagination" aria-label="Lesson pages"></nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Learn with Ms.Thúy — Made for curious ears.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
