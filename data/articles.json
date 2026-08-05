@@ -1,0 +1,98 @@
+[
+  {
+    "id": "lesson1",
+    "title": "Daily Routine",
+    "level": "A1",
+    "audio": "lesson1.mp3",
+    "duration": "3 phút",
+    "date": "2025-08-01"
+  },
+  {
+    "id": "lesson2",
+    "title": "Healthy Lifestyle",
+    "level": "B1",
+    "audio": "lesson2.mp3",
+    "duration": "4 phút",
+    "date": "2025-08-02"
+  },
+  {
+    "id": "lesson3",
+    "title": "A Trip to the City",
+    "level": "A2",
+    "audio": "lesson3.mp3",
+    "duration": "3 phút",
+    "date": "2025-08-03"
+  },
+  {
+    "id": "lesson4",
+    "title": "The Future of Work",
+    "level": "B2",
+    "audio": "lesson4.mp3",
+    "duration": "5 phút",
+    "date": "2025-08-04"
+  },
+  {
+    "id": "lesson5",
+    "title": "Climate and Nature",
+    "level": "C1",
+    "audio": "lesson5.mp3",
+    "duration": "5 phút",
+    "date": "2025-08-05"
+  },
+  {
+    "id": "lesson6",
+    "title": "Shopping at the Market",
+    "level": "A1",
+    "audio": "lesson6.mp3",
+    "duration": "2 phút",
+    "date": "2025-08-06"
+  },
+  {
+    "id": "lesson7",
+    "title": "My Family",
+    "level": "A1",
+    "audio": "lesson7.mp3",
+    "duration": "3 phút",
+    "date": "2025-08-07"
+  },
+  {
+    "id": "lesson8",
+    "title": "Technology in Education",
+    "level": "B2",
+    "audio": "lesson8.mp3",
+    "duration": "4 phút",
+    "date": "2025-08-08"
+  },
+  {
+    "id": "lesson9",
+    "title": "Traveling Abroad",
+    "level": "B1",
+    "audio": "lesson9.mp3",
+    "duration": "4 phút",
+    "date": "2025-08-09"
+  },
+  {
+    "id": "lesson10",
+    "title": "Global Economy Trends",
+    "level": "C2",
+    "audio": "lesson10.mp3",
+    "duration": "6 phút",
+    "date": "2025-08-10"
+  },
+  {
+    "id": "lesson11",
+    "title": "At the Restaurant",
+    "level": "A2",
+    "audio": "lesson11.mp3",
+    "duration": "3 phút",
+    "date": "2025-08-11"
+  },
+  {
+    "id": "lesson12",
+    "title": "Modern Art and Culture",
+    "level": "C1",
+    "audio": "lesson12.mp3",
+    "duration": "5 phút",
+    "date": "2025-08-12"
+  }
+]
